@@ -101,6 +101,16 @@ final class OneSignalOptions implements MessageOptionsInterface
     /**
      * @return $this
      */
+    public function includeExternalUserIds(array $externalUserIdsList): static
+    {
+        $this->options['include_external_user_ids'] = $externalUserIdsList;
+
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
     public function recipient(string $id): static
     {
         $this->options['recipient_id'] = $id;
