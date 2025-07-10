@@ -40,7 +40,7 @@ final class OneSignalTransportTest extends TransportTestCase
 
         $transport->setHost($customHost = self::CUSTOM_HOST);
 
-        $this->assertSame(sprintf('onesignal://9fb175f0-0b32-4e99-ae97-bd228b9eb246@%s', $customHost), (string) $transport);
+        $this->assertSame(\sprintf('onesignal://9fb175f0-0b32-4e99-ae97-bd228b9eb246@%s', $customHost), (string) $transport);
     }
 
     public function testCanSetCustomHostAndPort()
@@ -50,7 +50,7 @@ final class OneSignalTransportTest extends TransportTestCase
         $transport->setHost($customHost = self::CUSTOM_HOST);
         $transport->setPort($customPort = self::CUSTOM_PORT);
 
-        $this->assertSame(sprintf('onesignal://9fb175f0-0b32-4e99-ae97-bd228b9eb246@%s:%d', $customHost, $customPort), (string) $transport);
+        $this->assertSame(\sprintf('onesignal://9fb175f0-0b32-4e99-ae97-bd228b9eb246@%s:%d', $customHost, $customPort), (string) $transport);
     }
 
     public static function toStringProvider(): iterable
